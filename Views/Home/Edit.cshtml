@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    @{
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/" style="margin: 0px 0px 0px 20px;">Test App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                            <a class="nav-link" href="/goHome">Dashboard <span class="sr-only">(current)</span></a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/edit">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signout">Sign Out</a>
+                    </li>
+                    @* <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown link </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> *@
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="UsersNewTop">
+            <h3 class="AdminEditH3">Edit Profile</h3>
+        </div>
+        <div class="AdminEditContainer">
+            @Html.ValidationSummary(false)
+            <div class="AdminEditLeftContainer">
+                <div class="AdminEditLeft">
+                    @model UpdatedUser
+                    <form asp-controller="Home" asp-action="Update" method="POST">
+                        <span asp-validation-for="firstName"></span>
+                        <label asp-for="firstName">First Name: </label>
+                        <input type="text" name="firstName" class="register" value=@ViewBag.firstName>
+                        <span asp-validation-for="lastName"></span>
+                        <label asp-for="lastName">Last Name: </label>
+                        <input type="text" name="lastName"class="register" value="@ViewBag.lastName">
+                        <span asp-validation-for="email"></span>
+                        <label asp-for="email">Email: </label>
+                        <input type = "text" name = "email"class="register" value="@ViewBag.email">
+                        <button type="submit" class="btn btn-success" id="EditSaveButton">Save</button>
+                    </form>
+                </div>
+            </div>
+            <div class="AdminEditRightContainer">
+                <div class="AdminEditRight">
+                    <form asp-controller="Home" asp-action="UpdatePassword" method="Post">
+                        <span asp-validation-for="password"></span>
+                        <label asp-for="password">Password: </label>
+                        <input type="text" name="password" class="register">
+                        <span asp-validation-for="confirmPassword"></span>
+                        <label asp-for="confirmPassword">Confirm Password: </label>
+                        <input type="text" name="confirmPassword" class="register">
+                        @* <span asp-validation-for="IsAdmin"></span>
+                        <label asp-for="IsAdmin">Initiate as an admin</label>
+                        <input type="radio" name="IsAdmin" id="true" value="true" class="register">
+                        <span asp-validation-for="IsAdmin"></span>
+                        <label asp-for="IsAdmin">Initiate as a standard user</label>
+                        <input type="radio" name="IsAdmin" id="false" value="false" class="register"> *@
+                        <button type="submit" class="btn btn-success" id="AdminEditSaveButton">Change Password</button>
+                    </form>
+                </div>
+            </div>
+            <div class="AdminEditDescriptionContainer">
+                
+                <form asp-controller="Home" asp-action="Description" method="Post">
+                    <span asp-validation-for="description"></span>
+                    <label asp-for="description" style="display: block; margin: 25px 0px 0px 25px;">Description: </label>
+                    <textarea cols="70" rows="7" name="newDescription" style="margin: 0px 0px 0px 25px;"></textarea>
+                    <button type="submit" class="btn btn-success" id="EditDescriptionSaveButton">Save</button>
+                </form>
+            </div>
+        </div>
+    }
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

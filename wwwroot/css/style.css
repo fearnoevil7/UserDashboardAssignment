@@ -1,0 +1,144 @@
+.MainNavBarSettings{
+    margin: 0px 0px 0px 20px;
+}
+/* Index.cshtml */
+.BottomIndex{
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+    margin: 45px 50px 0px 55px;
+}
+/* Login.cshtml css */
+.login{
+    display: block;
+    margin: 0px, 0px 0px 0px;
+}
+.loginContainer{
+    margin: 150px 0px 0px 475px;
+}
+.loginh3{
+    margin: 0px 0px 25px 0px;
+}
+#loginButton{
+    margin: 25px 0px 0px 139px;
+}
+/* Register.cshtml */
+.register{
+    display: block;
+}
+.registerContainer{
+    margin: 150px 0px 0px 475px;
+}
+#registerButton{
+    margin: 25px 0px 0px 138px;
+}
+.registerh3{
+    margin: 0px 0px 25px 0px;
+}
+/* AdminDashboard.cshtml */
+.AdminDashboardh3
+{
+    display: inline-block;
+    margin: 25px 0px 25px 40px;
+}
+#AdminDashboardButton
+{
+    display: inline-block;
+    margin: 0px 0px 0px 800px;
+}
+/* Dashboard.cshtml */
+.Dashboardh3{
+    margin: 25px 0px 25px 40px;
+}
+
+/* New.cshtml */
+.UsersNewh3{
+    display: inline-block;
+    margin: 100px 200px 25px 426px;
+}
+.UsersNewButton{
+    margin: 0px 0px 0px 200px;
+}
+.UserNewTop{
+    margin: 0px 0px 0px 0px;
+}
+.UserNewContainer{
+    margin: 50px 0px 0px 475px;
+}
+/* AdminEdit.cshtml */
+.AdminEditContainer{
+    margin: 50px 0px 0px 250px;
+}
+#AdminEditButton
+{
+    display: block;
+    margin: 0px 0px 0px 155px;
+}
+.AdminEditLeftContainer{
+    height: 400px;
+    width: 400px;
+    margin: 0px 52px 52px 0px;
+    border: 3px solid black;
+    display: inline-block;
+}
+.AdminEditRightContainer{
+    height: 400px;
+    width: 400px;
+    margin: 0px 0px 52px 0px;
+    border: 3px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+.AdminEditRight{
+    height: 300px;
+    width: 300px;
+    margin: 80px 0px 0px 90px;
+    vertical-align: top;
+}
+.AdminEditLeft{
+    height: 300px;
+    width: 300px;
+    margin: 55px 0px 0px 90px;
+}
+#AdminEditSaveButton{
+    margin: 25px 0px 0px 53px;
+}
+.AdminEditH3{
+    display: inline-block;
+    margin: 100px 200px 25px 250px;
+}
+#AdminEditHomeButton{
+    margin: 0px 0px 0px 286px;
+}
+.AdminEditDescriptionContainer{
+    height: 304px;
+    width: 738px;
+    margin: 50px 0px 0px 52px;
+    border: 3px solid black;
+    display: block;
+}
+.AdminEditDescription{
+    height: 325px;
+    width: 738px;
+    margin: 80px 0px 0px 65px;
+}
+/* Edit.cshtml */
+#EditSaveButton{
+    margin: 25px 0px 0px 155px;
+}
+#EditDescriptionSaveButton{
+    margin: 25px 0px 52px 646px;
+}
+/* Show.cshtml */
+.ShowTopInfoContainer{
+    margin: 0px 0px 0px 100px;
+}
+.ShowFormContainer{
+    margin: 0px 0px 0px 100px;
+}
+.ShowMessageContainer{
+    width: 700px;
+    height: 250px;
+    border: 3px solid black;
+}
